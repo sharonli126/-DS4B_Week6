@@ -24,7 +24,9 @@ data <- read_csv("raw_data/data.csv")
 
 ## An interesting plot
 ```{r}
-ggplot(data, aes(x = TempC, y = NumLimbsRegenerating))+
-  geom_point(aes(color = Sex), alpha = .5) 
+ggplot(data, aes(x = weight, y = VO2_ml_per_h))+
+  geom_point(aes(color = TempC), alpha = .5)  +
+  geom_smooth(method = lm) +
+  scale_color_viridis_c(option = "D")
 ```
 
