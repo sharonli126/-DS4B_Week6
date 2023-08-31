@@ -15,4 +15,16 @@ output:
 ---
 # Bonus section
 ## Loading the data
+```{r}
+library(tidyverse)
+
+data <- read_csv("raw_data/data.csv")
+
+```
+
 ## An interesting plot
+```{r}
+ggplot(data, aes(x = TempC, y = NumLimbsRegenerating))+
+  geom_point(aes(color = Sex), alpha = .5) 
+```
+
